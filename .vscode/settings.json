@@ -1,0 +1,19 @@
+{
+    "zopeneditor.userbuild.workspaceSettings": {
+        "dbb": {
+          "command": "$DBB_HOME/bin/groovyz -DBB_PERSONAL_DAEMON",
+          "buildScriptPath" : "/S0W1/var/dbb-zappbuild/build.groovy",
+          "buildScriptArgs": [
+            "--userBuild",
+            "--workspace ${zopeneditor.userbuild.userSettings.dbbWorkspace}",
+            "--application MortgageApplication",
+            "--hlq ${zopeneditor.userbuild.userSettings.dbbHlq}",
+            "--outDir ${zopeneditor.userbuild.userSettings.dbbLogDir}",
+            "--verbose"
+          ],
+          "additionalDependencies": [
+            "application-conf"
+          ]
+        }
+    }
+}
