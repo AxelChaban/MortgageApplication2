@@ -30,14 +30,14 @@ stages:
 echo DBB:
   stage: echo
   tags:
-    - zos-ssh
+    - zdnt-10.7.1.43
   script:
   - echo "echoAxel"
 
 Push DBB:
   stage: compil
   tags:
-    - zos-ssh
+    - zdnt-10.7.1.43
   variables:
      CI_PIPELINE_SOURCE :
        value : "pipeline"
