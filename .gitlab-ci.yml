@@ -47,6 +47,7 @@ Push DBB:
       value : "true"
   script:
   - echo "Push DBB project Axel to USS"
+  - $DBB_HOME/bin/groovyz var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /var/dbb-sandbox --hlq IBMUSER --workDir /var/dbb-sandbox/work-fullbuild --application MortgageApplication_gitlab --logEncoding UTF-8 --fullBuild --verbose
  # - $DBB_HOME/bin/groovyz /u/ibmuser/dbb-zappbuild-main/build.groovy --workspace /u/ibmuser/dbb-sandbox --hlq IBMUSER --workDir /u/ibmuser/dbb-sandbox/work-fullbuild --application MortgageApplication --logEncoding UTF-8 --fullBuild --verbose
  # - $DBB_HOME/bin/groovyz -DBB_PERSONAL_DAEMON -Djava.library.path=/var/dbb/dbb-ztoolkit-1.1.3/lib:/usr/lib/java_runtime64 /u/ibmuser/dbb-zappbuild-2-x/build.groovy --workspace /u/ibmuser/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/${CI_PROJECT_NAMESPACE} --application ${CI_PROJECT_NAME} --workDir /u/ibmuser/build/logs/BUILD-${CI_PIPELINE_ID} --hlq IBMUSER --url https://10.7.1.43:9443/dbb/ --id IBMUSER --pw sys1 --verbose --fullBuild
 
