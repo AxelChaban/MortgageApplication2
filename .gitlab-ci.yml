@@ -52,7 +52,7 @@ Push DBB:
       value : "true"
   script:
   - echo $DBB_HOME " - Push DBB project Axel to USS"
-  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /var/dbb-sandbox --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-fullbuild --application MortgageApplication_gitlab --logEncoding UTF-8 --fullBuild --verbose
+  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-fullbuild --application MortgageApplication --logEncoding UTF-8 --fullBuild --verbose
 
 echo Fin DBB:
   stage: echo-fin
