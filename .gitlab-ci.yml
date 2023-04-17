@@ -18,12 +18,12 @@
 
 #workflow:
 #  rules:
-#    - changes: 
+#    - changes:
 #      - README.md
 #      - .vscode/*
 #      when: never
 #    - when: always1
-    
+
 stages:
   - echo-debut
   - compil
@@ -48,11 +48,11 @@ Push DBB:
   variables:
      CI_PIPELINE_SOURCE :
        value : "pipeline"
-     CI_DEBUG_TRACE: 
+     CI_DEBUG_TRACE:
       value : "true"
   script:
   - echo $DBB_HOME " - Push DBB project Axel to USS"
-  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /var/dbb-sandbox --hlq IBMUSER --workDir /var/dbb-sandbox/work-fullbuild --application MortgageApplication_gitlab --logEncoding UTF-8 --fullBuild --verbose
+  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /var/dbb-sandbox --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-fullbuild --application MortgageApplication_gitlab --logEncoding UTF-8 --impactBuild --verbose
 
 echo Fin DBB:
   stage: echo-fin
@@ -64,11 +64,11 @@ echo Fin DBB:
   script:
   - echo "FIN DU BUILD"
 
-  
+
 #stages:
  # - init
   #- compil
-   
+
 #compilation:
  # stage: compil
   #tags:
