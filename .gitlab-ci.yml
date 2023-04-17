@@ -31,7 +31,8 @@ echo DBB:
   stage: echo
   tags:
     #- zdnt-10.7.1.43
-    - runner-zos-10.3.20.34
+    #- runner-zos-10.3.20.34
+    - zos-10.3.20.34-V3
     #- eole59-axel
   script:
   - echo "echoAxel3"
@@ -40,8 +41,8 @@ Push DBB:
   stage: compil
   tags:
     #- zdnt-10.7.1.43
-    #
-    - runner-zos-10.3.20.34
+    #- runner-zos-10.3.20.34
+    - zos-10.3.20.34-V3
     #- eole59-axel
   variables:
      CI_PIPELINE_SOURCE :
