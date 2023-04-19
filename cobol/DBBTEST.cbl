@@ -19,5 +19,5 @@
 ********       01 CUSTOMER-COPY.
 ********          COPY EPSMTCOM.
        PROCEDURE DIVISION.
-                DISPLAY 'AXELTESTDBB6_GITLAB01'.
+                DISPLAY 'AXELTESTDBB1_GITLAB01'.
                 STOP RUN.
