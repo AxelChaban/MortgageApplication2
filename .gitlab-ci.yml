@@ -62,6 +62,7 @@ echo Fin DBB:
     #- zos-10.3.20.34-V3
     - eole59-axel
   script:
+  - $ git push –mirror https://github.com/AxelChaban/MortgageApplication.git
   - echo "FIN DU BUILD"
 
 
