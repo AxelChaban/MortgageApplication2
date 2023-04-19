@@ -51,13 +51,8 @@ Push DBB:
      CI_DEBUG_TRACE:
       value : "true"
   script:
-<<<<<<< HEAD
-  - echo $DBB_HOME " - Push DBB project Axel to USS1"
-  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /var/dbb-sandbox --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-impactbuild --application MortgageApplication_gitlab --logEncoding UTF-8 --impactBuild --verbose
-=======
   - echo $DBB_HOME " - Push DBB project Axel to USS"
   - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-impactbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --impactBuild --verbose
->>>>>>> branch 'development' of https://gitlab.com/AxelChaban/MortgageApplication.git
 
 echo Fin DBB:
   stage: echo-fin
