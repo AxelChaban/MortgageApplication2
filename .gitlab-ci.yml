@@ -64,7 +64,7 @@ echo Fin DBB:
   script:
   #- git remote add origin git@github.com:AxelChaban/MortgageApplication.git
   #- git push -u origin
-   - git push --mirror https://github.com/AxelChaban/MortgageApplication.git
+  - git push --mirror https://github.com/AxelChaban/MortgageApplication.git
   - echo "FIN DU BUILD"
 
 
