@@ -52,7 +52,7 @@ Push DBB:
       value : "true"
   script:
   - echo $DBB_HOME " - Push DBB project Axel to USS1"
-  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-impactbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --impactBuild --verbose
+  #- $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-impactbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --impactBuild --verbose
 
 echo Fin DBB:
   stage: echo-fin
@@ -62,8 +62,9 @@ echo Fin DBB:
     #- zos-10.3.20.34-V3
     - eole59-axel
   script:
-  - git remote add origin git@github.com:AxelChaban/MortgageApplication.git
-  - git push -u origin master
+  #- git remote add origin git@github.com:AxelChaban/MortgageApplication.git
+  #- git push -u origin
+   - git push --mirror https://github.com/AxelChaban/MortgageApplication.git
   - echo "FIN DU BUILD"
 
 
