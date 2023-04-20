@@ -43,8 +43,8 @@ Push DBB:
   tags:
     #- zdnt-10.7.1.43
     #- runner-zos-10.3.20.34
-    #- zos-10.3.20.34-V3
-    - eole59-axel
+    - zos-10.3.20.34-V3
+    #- eole59-axel
   variables:
      CI_PIPELINE_SOURCE :
        value : "pipeline"
@@ -59,12 +59,12 @@ echo Fin DBB:
   tags:
     #- zdnt-10.7.1.43
     #- runner-zos-10.3.20.34
-    #- zos-10.3.20.34-V3
-    - eole59-axel
+    - zos-10.3.20.34-V3
+    #- eole59-axel
   script:
   #- git remote add origin git@github.com:AxelChaban/MortgageApplication.git
   #- git push -u origin
-  - git push --mirror https://github.com/AxelChaban/MortgageApplication.git
+  #- git push --mirror https://github.com/AxelChaban/MortgageApplication.git
   - echo "FIN DU BUILD"
 
 
