@@ -18,6 +18,11 @@
        WORKING-STORAGE SECTION.
 ********       01 CUSTOMER-COPY.
 ********          COPY EPSMTCOM.
+       01 DATE-JOUR PIC X(10).
        PROCEDURE DIVISION.
-                DISPLAY 'AXELTESTDBB6_GITLAB01'.
+                DISPLAY 'AXELTESTDBB7_GITLAB01'.
+                PERFORM A010-AFFICHAGE-DATE.
+      *
+       A010-AFFICHAGE-DATE.
+                MOVE '2023-04-27' TO DATE-JOUR.
                 STOP RUN.
