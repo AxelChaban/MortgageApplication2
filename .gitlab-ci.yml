@@ -52,7 +52,7 @@ Push DBB:
       value : "true"
   script:
   - echo $DBB_HOME " - Push DBB project Axel to USS1"
-  #- $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-impactbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --impactBuild --verbose
+  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-impactbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --impactBuild --verbose
 
 echo Fin DBB:
   stage: echo-fin
@@ -66,18 +66,3 @@ echo Fin DBB:
   #- git push -u origin
   #- git push --mirror https://github.com/AxelChaban/MortgageApplication.git
   - echo "FIN DU BUILD"
-
-
-#stages:
- # - init
-  #- compil
-
-#compilation:
- # stage: compil
-  #tags:
-  #  - LD034ZDT00001V  # tag référencé pour lier runner SSH et serveur cible ; on execute script sur le serveur cible
-  #variables:
-#        GIT_STRATEGY: none # no clone needed
-   #     CI_DEBUG_TRACE: "true"
-  #script:
-   #  - $DBB_HOME/bin/groovyz -DBB_PERSONAL_DAEMON -Djava.library.path=/var/dbb/dbb-ztoolkit-1.1.3/lib:/usr/lib/java_runtime64 /u/ibmuser/dbb-zappbuild-2-x/build.groovy --workspace /u/ibmuser/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/${CI_PROJECT_NAMESPACE} --application ${CI_PROJECT_NAME} --workDir /u/ibmuser/build/logs/BUILD-${CI_PIPELINE_ID} --hlq IBMUSER --url https://10.7.1.43:9443/dbb/ --id IBMUSER --pw sys1 --verbose --fullBuild

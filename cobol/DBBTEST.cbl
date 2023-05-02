@@ -24,5 +24,5 @@
                 PERFORM A010-AFFICHAGE-DATE.
       *
        A010-AFFICHAGE-DATE.
-                MOVE '2023-04-27' TO DATE-JOUR.
+                MOVE '2023-05-02' TO DATE-JOUR.
                 STOP RUN.
