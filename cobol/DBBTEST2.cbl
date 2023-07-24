@@ -20,5 +20,5 @@
           COPY EPSMTCOM.
   *****COPY BNK1DDM.
        PROCEDURE DIVISION.
-                DISPLAY 'AXELDBBTEST2_GITLAB01'.
+                DISPLAY 'AXELDBBTEST3_GITLAB02'.
                 STOP RUN.
