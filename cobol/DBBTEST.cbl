@@ -9,7 +9,7 @@
       *** File Control                                              ***
       *****************************************************************
        INPUT-OUTPUT SECTION.
-       FILE-CONTROL.
+       FILE-CONTRL.
        DATA DIVISION.
       ****************************************************************
       *** File Section                                              ***
@@ -20,7 +20,7 @@
 ********          COPY EPSMTCOM.
        01 DATE-JOUR PIC X(10).
        PROCEDURE DIVISION.
-                MOVE AXELTESTDBB7_GITLAB01'.
+                MOVE AXELTESTDBB7_GITLAB02'.
                 PERFORM A010-AFFICHAGE-DATE.
       *
        A010-AFFICHAGE-DATE.
