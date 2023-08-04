@@ -54,7 +54,7 @@ Push DBB:
   - echo $DBB_HOME " - Push DBB project Axel to USS1"
   #- $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-fullbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --fullbuild --verbose
   #- $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-impactbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --impactbuild MortgageApplication/cobol/DBBTEST.cbl --verbose
-  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --sourceDir /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --workDir /work-impactbuild/${CI_PIPELINE_ID} --hlq ACHABAN.MORTGAGE --application MortgageApplication --verbose --impactbuild  --verbose
+  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --sourceDir /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --workDir /var/dbb-sandbox/work-impactbuild/${CI_PIPELINE_ID} --hlq ACHABAN.MORTGAGE --application MortgageApplication --verbose --impactbuild  --verbose
 
 
 echo Fin DBB:
