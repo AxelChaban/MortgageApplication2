@@ -15,5 +15,9 @@
             "application-conf"
           ]
         }
-    }
+    },
+    "zopeneditor.zapp.useDefaultOnlineZappSchema": true,
+    "zowe.files.temporaryDownloadsFolder.path": "/projects",
+    "zopeneditor.zcodeformat.useDefaultOnlineZCodeFormatSchema": true,
+    "zowe.security.secureCredentialsEnabled": false
 }
