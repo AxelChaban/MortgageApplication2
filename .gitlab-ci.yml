@@ -36,7 +36,7 @@ echo DBB:
     #- zos-10.3.20.34-V3
     - eole59-axel
   script:
-  - echo "echoAxel9"
+  - echo "echoAxel10"
 
 Push DBB:
   stage: compil
@@ -52,7 +52,10 @@ Push DBB:
       value : "true"
   script:
   - echo $DBB_HOME " - Push DBB project Axel to USS1"
-  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-impactbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --impactBuild --verbose
+  #- $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-fullbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --fullbuild --verbose
+  #- $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-impactbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --impactbuild MortgageApplication/cobol/DBBTEST.cbl --verbose
+  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --sourceDir /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --workDir /var/dbb-sandbox/work-fullbuild/${CI_PIPELINE_ID} --hlq ACHABAN.MORTGAGE --application MortgageApplication --verbose --fullbuild  --verbose
+
 
 echo Fin DBB:
   stage: echo-fin
@@ -65,4 +68,4 @@ echo Fin DBB:
   #- git remote add origin git@github.com:AxelChaban/MortgageApplication.git
   #- git push -u origin
   #- git push --mirror https://github.com/AxelChaban/MortgageApplication.git
-  - echo "FIN DU BUILD"
+  - echo "FIN DU BUILD1"
