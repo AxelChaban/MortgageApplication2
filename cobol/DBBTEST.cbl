@@ -20,7 +20,7 @@
 ********          COPY EPSMTCOM.
        01 DATE-JOUR PIC X(10).
        PROCEDURE DIVISION.
-                MOVE AXELTESTDBB7_GITLAB06_ocp_wazicode'.
+                display 'AXELTESTDBB7_GITLAB06_ocp_wazicode'.
                 PERFORM A010-AFFICHAGE-DATE.
       *
        A010-AFFICHAGE-DATE.
