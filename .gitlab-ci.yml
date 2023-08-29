@@ -36,7 +36,7 @@ echo DBB:
     #- zos-10.3.20.34-V3
     - eole59-axel
   script:
-  - echo "echoAxel14"
+  - echo "echoAxel15"
 
 Push DBB:
   stage: compil
@@ -55,7 +55,7 @@ Push DBB:
   #- $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-fullbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --fullbuild --verbose
   #- $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --workspace /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/$CI_PROJECT_NAMESPACE --hlq achaban.mortgage --workDir /var/dbb-sandbox/work-impactbuild/${CI_PIPELINE_ID} --application MortgageApplication --logEncoding UTF-8 --impactbuild MortgageApplication/cobol/DBBTEST.cbl --verbose
   #- $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --sourceDir /u/wfezzan/builds/${CI_RUNNER_SHORT_TOKEN}/${CI_CONCURRENT_ID}/${CI_PROJECT_NAMESPACE} --hlq ACHABAN.MORTGAGE --workDir /var/dbb-sandbox/work-fullbuild/${CI_PIPELINE_ID}  --application MortgageApplication --logEncoding UTF-8 --fullbuild  --verbose
-  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --sourceDir /u/wfezzan/builds/oJ_hmb5s/0/AxelChaban --hlq ACHABAN.MORTGAGE --workDir /var/dbb-sandbox/work-fullbuild/${CI_PIPELINE_ID}  --application MortgageApplication --logEncoding UTF-8 --fullbuild  --verbose
+  - $DBB_HOME/bin/groovyz /var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy --sourceDir /u/wfezzan/builds/oJ_hmb5s/0/AxelChaban --hlq ACHABAN.MORTGAGE --workDir /var/dbb-sandbox/work-fullbuild/${CI_PIPELINE_ID}  --application MortgageApplication --logEncoding UTF-8 --fullBuild  --verbose
 
 
 echo Fin DBB:
