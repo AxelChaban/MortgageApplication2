@@ -20,11 +20,7 @@
 ********          COPY EPSMTCOM.
        01 DATE-JOUR PIC X(10).
        PROCEDURE DIVISION.
-<<<<<<< HEAD
                 DISPLAY 'AXELTESTDBB7_GITLAB01_openshift'.
-=======
-                MOVE AXELTESTDBB7_GITLAB06'.
->>>>>>> 8271eec99d04ff3861ae92478c8630cfe8629ac7
                 PERFORM A010-AFFICHAGE-DATE.
       *
        A010-AFFICHAGE-DATE.
