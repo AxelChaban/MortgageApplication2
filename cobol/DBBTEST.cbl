@@ -20,7 +20,7 @@
 ********          COPY EPSMTCOM.
        01 DATE-JOUR PIC X(10).
        PROCEDURE DIVISION.
-                MOVE AXELTESTDBB7_GITLAB07'.
+                MOVE AXELTESTDBB7_GITLAB08'.
                 PERFORM A010-AFFICHAGE-DATE.
       *
        A010-AFFICHAGE-DATE.
