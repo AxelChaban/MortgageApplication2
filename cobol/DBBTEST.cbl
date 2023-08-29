@@ -9,7 +9,7 @@
       *** File Control                                              ***
       *****************************************************************
        INPUT-OUTPUT SECTION.
-       FILE-CONTRL.
+       FILE-CONTROL.
        DATA DIVISION.
       ****************************************************************
       *** File Section                                              ***
