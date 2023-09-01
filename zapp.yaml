@@ -89,13 +89,14 @@ profiles:
     type: dbb
     settings:
       application: MortgageApplication
-      command: "$DBB_HOME/bin/groovyz -DBB_PERSONAL_DAEMON"
-      buildScriptPath: "/S0W1/var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy"
+      command: "$DBB_HOME/bin/groovyz"
+      buildScriptPath: "/var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy"
       buildScriptArgs:
         - "--userBuild"
         - "--workspace ${zopeneditor.userbuild.userSettings.dbbWorkspace}"
         - "--hlq ${zopeneditor.userbuild.userSettings.dbbHlq}"
         - "--outDir ${zopeneditor.userbuild.userSettings.dbbLogDir}"
+        - "--application MortgageApplication"
         - "--verbose"
       additionalDependencies:
         - application-conf

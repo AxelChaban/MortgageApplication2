@@ -1,0 +1,479 @@
+PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927                 Date 09/01/2023  Time 14:28:19   Page     1
+
+Invocation parameters:
+ LIB
+
+        IGYOS4090-I   The "LIB" option specification is no longer required.  COBOL library processing is always in effect.
+
+
+Options in effect:
+ NOADATA
+   ADV
+   AFP(NOVOLATILE)
+   QUOTE
+   ARCH(8)
+   ARITH(COMPAT)
+ NOAWO
+ NOBLOCK0
+   BUFSIZE(4096)
+ NOCICS
+   CODEPAGE(1140)
+ NOCOMPILE(S)
+ NOCOPYLOC
+ NOCOPYRIGHT
+ NOCURRENCY
+   DATA(31)
+   DBCS
+ NODECK
+ NODEFINE
+ NODIAGTRUNC
+   DISPSIGN(COMPAT)
+ NODLL
+ NODUMP
+ NODYNAM
+ NOEXIT
+ NOEXPORTALL
+ NOFASTSRT
+   FLAG(I,I)
+ NOFLAGSTD
+   HGPR(PRESERVE)
+ NOINITCHECK
+ NOINITIAL
+   INLINE
+   INTDATE(ANSI)
+ NOINVDATA
+   LANGUAGE(EN)
+   LINECOUNT(60)
+ NOLIST
+   LP(32)
+ NOMAP
+   MAXPCF(100000)
+ NOMDECK
+ NONAME
+   NSYMBOL(NATIONAL)
+ NONUMBER
+ NONUMCHECK
+   NUMPROC(NOPFD)
+   OBJECT
+ NOOFFSET
+   OPTIMIZE(0)
+   OUTDD(SYSOUT)PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927                 Date 09/01/2023  Time 14:28:19   Page     2
+
+ NOPARMCHECK
+   PGMNAME(COMPAT)
+   QUALIFY(COMPAT)
+   RENT
+   RMODE(AUTO)
+ NORULES
+ NOSERVICE
+   SEQUENCE
+   SOURCE(DEC)
+   SPACE(1)
+ NOSQL
+   SQLCCSID
+ NOSQLIMS
+ NOSSRANGE
+ NOSTGOPT
+   SUPPRESS
+ NOTERM
+ NOTEST(NODWARF,NOSOURCE,NOSEPARATE)
+ NOTHREAD
+   TRUNC(STD)
+   TUNE(8)
+ NOVBREF
+   VLR(STANDARD)
+   VSAMOPENFS(COMPAT)
+ NOWORD
+   XMLPARSE(XMLSS)
+   XREF(FULL)
+   ZWBPP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927                 Date 09/01/2023  Time 14:28:19   Page     3
+
+LineID  Message code  Library phase message text
+
+        IGYLI0090-W   1 sequence errors were found in this program.
+
+
+Messages    Total    Informational    Warning    Error    Severe    Terminating
+
+Printed:       1                          1PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 14:28:19   Page     4
+  LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
+
+  000001           ******************************************************************
+  000002                IDENTIFICATION DIVISION.
+  000003               *AUTHOR. Axel CHABAN.
+  000004                PROGRAM-ID. DBBTEST.
+  000005                ENVIRONMENT DIVISION.
+  000006                CONFIGURATION SECTION.
+  000007                SOURCE-COMPUTER. MAINFRAME.
+  000008               *****************************************************************
+  000009               *** File Control                                              ***
+  000010               *****************************************************************
+  000011                INPUT-OUTPUT SECTION.
+  000012                FILE-CONTROL.
+  000013                DATA DIVISION.
+  000014               ****************************************************************
+  000015               *** File Section                                              ***
+  000016               *****************************************************************
+  000017                FILE SECTION.
+  000018                WORKING-STORAGE SECTION.
+  000019         ****** 01 CUSTOMER-COPY.
+  000020**       ******     COPY EPSMTCOM.
+  000021C                  10  PROCESS-INDICATOR               PIC X.
+  000022C
+  000023C                  COPY EPSMTINP.
+  000024C              * INPUT
+  000025C                  10 EPSPCOM-PRINCIPLE-DATA   PIC S9(9)V99 COMP.
+  000026C                  10 EPSPCOM-NUMBER-OF-YEARS  PIC S9(4)    COMP.
+  000027C                  10 EPSPCOM-NUMBER-OF-MONTHS PIC S9(4)    COMP.
+  000028C                  10 EPSPCOM-QUOTED-INTEREST-RATE
+  000029C                                                PIC S9(2)v9(3) COMP.
+  000030C                  10 EPSPCOM-YEAR-MONTH-IND   PIC X.
+  000031C                  COPY EPSMTOUT.
+  000032C              * OUTPUT  modification build
+  000033C                  10 EPSPCOM-RETURN-MONTH-PAYMENT
+  000034C                                              PIC S9(7)V99 COMP.
+  000035C                  10 EPSPCOM-ERRMSG           PIC X(80).
+  000036C                  10 EPSPCOM-PROGRAM-RETCODE  PIC 9(4).
+  000037C                     88 EPS02-REQUEST-SUCCESS VALUE 0.
+  000038C                  10 EPSPCOM-PROGRAM-RETCODE-RDF
+  000039C                          REDEFINES EPSPCOM-PROGRAM-RETCODE                              36
+  000040C                                              PIC X(4).
+  000041                01 DATE-JOUR PIC X(10).
+  000042                PROCEDURE DIVISION.
+  000043                         DISPLAY 'AXELTESTDBB7_GITLAB01_VSCODE'.
+  000044                         PERFORM A010-AFFICHAGE-DATE.                                     46
+  000045               *
+  000046                A010-AFFICHAGE-DATE.
+  000047                         MOVE '2023-05-02' TO DATE-JOUR.                                  41
+  000048                         STOP RUN.PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 14:28:19   Page     5
+
+An "M" preceding a data-name reference indicates that the data-name is modified by this reference.
+
+ Defined   Cross-reference of data names   References
+
+      19   CUSTOMER-COPY
+      41   DATE-JOUR. . . . . . . . . . .  M47
+      35   EPSPCOM-ERRMSG
+      27   EPSPCOM-NUMBER-OF-MONTHS
+      26   EPSPCOM-NUMBER-OF-YEARS
+      25   EPSPCOM-PRINCIPLE-DATA
+      36   EPSPCOM-PROGRAM-RETCODE. . . .  39
+      38   EPSPCOM-PROGRAM-RETCODE-RDF
+      28   EPSPCOM-QUOTED-INTEREST-RATE
+      33   EPSPCOM-RETURN-MONTH-PAYMENT
+      30   EPSPCOM-YEAR-MONTH-IND
+      37   EPS02-REQUEST-SUCCESS
+      21   PROCESS-INDICATORPP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 14:28:19   Page     6
+
+Context usage is indicated by the letter preceding a procedure-name reference.
+These letters and their meanings are:
+    A = ALTER (procedure-name)
+    D = GO TO (procedure-name) DEPENDING ON
+    E = End of range of (PERFORM) through (procedure-name)
+    G = GO TO (procedure-name)
+    P = PERFORM (procedure-name)
+    T = (ALTER) TO PROCEED TO (procedure-name)
+    U = USE FOR DEBUGGING (procedure-name)
+
+ Defined   Cross-reference of procedures   References
+
+      46   A010-AFFICHAGE-DATE. . . . . .  P44PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 14:28:19   Page     7
+
+ Defined   Cross-reference of programs     References
+
+       4   DBBTESTPP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 14:28:19   Page     8
+
+
+         COPY/BASIS cross-reference of text-names, library names and dataset information
+
+ Text-name Library   File name                                    Concat   ISPF statistics
+ (Member)  (DDNAME)  (Dataset name)                               Level    Created         Changed
+
+ EPSMTCOM  SYSLIB    ACHABAN.MORTGAGE.COPY                          0
+ EPSMTINP  SYSLIB    ACHABAN.MORTGAGE.COPY                          0
+ EPSMTOUT  SYSLIB    ACHABAN.MORTGAGE.COPY                          0
+PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 14:28:19   Page     9
+
+LineID  Message code  Message text
+
+        IGYSC0205-W   Warning message(s) were issued during library phase processing.  Refer to the beginning of the listing.
+
+    44  IGYCB7310-W   The "PERFORM" statement at "PERFORM (line 44.1)" cannot reach its exit.
+
+
+Messages    Total    Informational    Warning    Error    Severe    Terminating
+
+Printed:       3           1              2
+
+
+* Statistics for COBOL program DBBTEST:
+*    Source records = 48
+*    Data Division statements = 13
+*    Procedure Division statements = 4
+*    Generated COBOL statements = 0
+*    Program complexity factor = 4
+
+End of compilation 1,  program DBBTEST,  highest severity 4.
+
+Return code 4
+1z/OS V2 R4 BINDER     14:28:20 FRIDAY SEPTEMBER  1, 2023
+ BATCH EMULATOR  JOB(ACHABAN6) STEP(*OMVSEX ) PGM= IEWBLINK
+ IEW2278I B352 INVOCATION PARAMETERS - MAP,RENT,COMPAT(PM5)
+
+1                         *** M O D U L E  M A P ***
+
+ ---------------
+ CLASS  C_CODE            LENGTH =      788  ATTRIBUTES = CAT,   LOAD, RMODE=ANY
+                          OFFSET =        0 IN SEGMENT 001     ALIGN = DBLWORD
+ ---------------
+
+  SECTION    CLASS                                      ------- SOURCE --------
+   OFFSET   OFFSET  NAME                TYPE    LENGTH  DDNAME   SEQ  MEMBER
+
+                 0  DBBTEST            CSECT       788  SYSLIN    01  DBBTEST
+        0        0     DBBTEST#C          LABEL
+        0        0     DBBTEST            LABEL
+
+ ---------------
+ CLASS  C_@@PPA2          LENGTH =        8  ATTRIBUTES = MRG,   LOAD, RMODE=ANY
+                          OFFSET =      788 IN SEGMENT 001     ALIGN = DBLWORD
+ ---------------
+
+             CLASS
+            OFFSET  NAME                TYPE    LENGTH   SECTION
+                 0  $PRIV000010      PART             8  DBBTEST
+
+ ---------------
+ CLASS  C_@@CSINIT        LENGTH =        4  ATTRIBUTES = MRG,   LOAD, RMODE=ANY
+                          OFFSET =      790 IN SEGMENT 001     ALIGN = DBLWORD
+ ---------------
+
+             CLASS
+            OFFSET  NAME                TYPE    LENGTH   SECTION
+                 0  $PRIV000011      PART             4  DBBTEST
+
+ ---------------
+ CLASS  B_TEXT            LENGTH =      BF0  ATTRIBUTES = CAT,   LOAD, RMODE=ANY
+                          OFFSET =      798 IN SEGMENT 001     ALIGN = DBLWORD
+ ---------------
+
+  SECTION    CLASS                                      ------- SOURCE --------
+   OFFSET   OFFSET  NAME                TYPE    LENGTH  DDNAME   SEQ  MEMBER
+
+                 0  IGZXBS61        *  CSECT        10  SYSLIB    02  IGZXBS61
+
+                10  CEESG004        *  CSECT        34  SYSLIB    02  CEESG004
+
+                48  IGZXRT1         *  CSECT        12  SYSLIB    02  IGZXRT1
+
+                60  IGZXTREC        *  CSECT        12  SYSLIB    02  IGZXTREC
+
+                78  IGZXDSP         *  CSECT        12  SYSLIB    02  IGZXDSP
+
+                90  IGZXCMSG        *  CSECT        12  SYSLIB    02  IGZXCMSG
+
+                A8  IGZXPRS         *  CSECT        12  SYSLIB    02  IGZXPRS
+
+                C0  IGZXBST4        *  CSECT       4E0  SYSLIB    02  IGZXBST4
+
+               5A0  CEEBETBL        *  CSECT        28  SYSLIB    02  CEEBETBL
+
+               5C8  CEESTART        *  CSECT        B0  SYSLIB    02  CEESTART
+
+1                         *** M O D U L E  M A P ***
+
+  SECTION    CLASS                                      ------- SOURCE --------
+   OFFSET   OFFSET  NAME                TYPE    LENGTH  DDNAME   SEQ  MEMBER
+
+               678  CEEBPUBT        *  CSECT        70  SYSLIB    02  CEEBPUBT
+
+               6E8  CEEBTRM         *  CSECT        74  SYSLIB    02  CEEBTRM
+
+               760  CEECPYRT        *  CSECT        CF  SYSLIB    02  CEEBTRM
+
+               830  CEEBLLST        *  CSECT        5C  SYSLIB    02  CEEBLLST
+       10      840     CEELLIST           LABEL
+
+               890  CEEBINT         *  CSECT         8  SYSLIB    02  CEEBINT
+
+               898  CEEARLU         *  CSECT        B8  SYSLIB    02  CEEARLU
+
+               950  CEEBPIRA        *  CSECT       2A0  SYSLIB    02  CEEINT
+        0      950     CEEINT             LABEL
+        0      950     CEEBPIRB           LABEL
+        0      950     CEEBPIRC           LABEL
+1                         *** M O D U L E  M A P ***
+
+ ---------------
+ CLASS  B_LIT             LENGTH =      100  ATTRIBUTES = CAT,   LOAD, RMODE=ANY
+                          OFFSET =     1388 IN SEGMENT 001     ALIGN = DBLWORD
+ ---------------
+
+  SECTION    CLASS                                      ------- SOURCE --------
+   OFFSET   OFFSET  NAME                TYPE    LENGTH  DDNAME   SEQ  MEMBER
+
+                 0  IEWBLIT            CSECT       100                **NULL**
+        0        0     IEWBLIT            LABEL
+
+ ---------------
+ CLASS  C_WSA             LENGTH =       98  ATTRIBUTES = MRG, DEFER , RMODE=ANY
+                          OFFSET =        0 IN SEGMENT 002     ALIGN = DBLWORD
+ ---------------
+
+             CLASS
+            OFFSET  NAME                TYPE    LENGTH   SECTION
+                 0  $PRIV000012      PART            10
+                10  DBBTEST#S        PART            88  DBBTEST
+
+ ---------------
+ CLASS  C_CEESG003        LENGTH =        0  ATTRIBUTES = CAT, NOLOAD
+
+ ---------------
+
+  SECTION    CLASS                                      ------- SOURCE --------
+   OFFSET   OFFSET  NAME                TYPE    LENGTH  DDNAME   SEQ  MEMBER
+
+                 0  DBBTEST            CSECT         0  SYSLIN    01  DBBTEST
+1          ***  DATA SET SUMMARY  ***
+
+ DDNAME    CONCAT   FILE IDENTIFICATION
+
+ SYSLIB      02     CEE.SCEELKED
+ SYSLIN      01     ACHABAN.MORTGAGE.OBJ
+1          *** SYMBOL REFERENCES NOT ASSOCIATED WITH ANY ADCON ***
+
+ TYPE   SCOPE   NAME
+
+
+           *** E N D  O F  M O D U L E  M A P ***
+
+
+
+                                 *** O P E R A T I O N   S U M M A R Y   R E P O R T ***
+
+1PROCESSING OPTIONS:
+
+    ALIASES             NO
+    ALIGN2              NO
+    AMODE               UNSPECIFIED
+    CALL                YES
+    CASE                UPPER
+    COMPAT              ZOSV1R8
+    COMPRESS            AUTO
+    DCBS                NO
+    DYNAM               NO
+    EXTATTR             UNSPECIFIED
+    EXITS:              NONE
+    FILL                NONE
+    GID                 UNSPECIFIED
+    HOBSET              NO
+    INFO                NO
+    LET                 04
+    LINECT              060
+    LIST                SUMMARY
+    LISTPRIV            NO
+    LONGPARM            NO
+    MAP                 YES
+    MAXBLK              032760
+    MODMAP              NO
+    MSGLEVEL            00
+    OVLY                NO
+    PRINT               YES
+    RES                 NO
+    REUSABILITY         REENTRANT
+    RMODE               UNSPECIFIED
+    RMODEX              NO
+    SIGN                NO
+    STORENX             NOREPLACE
+    STRIPCL             NO
+    STRIPSEC            NO
+    SYMTRACE
+    TERM                NO
+    TRAP                ON
+    UID                 UNSPECIFIED
+    UPCASE              NO
+    WKSPACE             000000K,000000K
+    XCAL                NO
+    XREF                NO
+    ***END OF OPTIONS***
+
+
+
+
+1SAVE OPERATION SUMMARY:
+
+    MEMBER NAME         DBBTEST
+    LOAD LIBRARY        ACHABAN.MORTGAGE.LOAD
+    PROGRAM TYPE        PROGRAM OBJECT(FORMAT 5 OS COMPAT LEVEL z/OS V1R8 )
+    VOLUME SERIAL       TEC000
+    DISPOSITION         REPLACED
+    TIME OF SAVE        14.28.20  SEP  1, 2023
+
+
+1SAVE MODULE ATTRIBUTES:
+
+    AC                  000
+    AMODE                31
+    COMPRESSION         BINDER DATA
+    DC                  NO
+    EDITABLE            YES
+    EXCEEDS 16MB        NO
+    EXECUTABLE          YES
+    LONGPARM            NO
+    MIGRATABLE          NO
+    OL                  NO
+    OVLY                NO
+    PACK,PRIME          NO,NO
+    PAGE ALIGN          NO
+    REFR                NO
+    RENT                YES
+    REUS                YES
+    RMODE               ANY
+    SCTR                NO
+    SIGN                NO
+    SSI
+    SYM GENERATED       NO
+    TEST                NO
+    XPLINK              NO
+    MODULE SIZE (HEX)   00001520
+    DASD SIZE (HEX)     00007000
+
+
+1 ENTRY POINT AND ALIAS SUMMARY:
+
+  NAME:            ENTRY TYPE AMODE C_OFFSET CLASS NAME        STATUS
+
+  DBBTEST           MAIN_EP      31 00000000 C_CODE
+
+                          *** E N D   O F   O P E R A T I O N   S U M M A R Y   R E P O R T ***
+
+
+
+
+1z/OS V2 R4 BINDER     14:28:20 FRIDAY SEPTEMBER  1, 2023
+ BATCH EMULATOR  JOB(ACHABAN6) STEP(*OMVSEX ) PGM= IEWBLINK
+ IEW2008I 0F03 PROCESSING COMPLETED.  RETURN CODE =  0.
+
+
+
+1----------------------
+ MESSAGE SUMMARY REPORT
+ ----------------------
+  TERMINAL MESSAGES      (SEVERITY = 16)
+  NONE
+
+  SEVERE MESSAGES        (SEVERITY = 12)
+  NONE
+
+  ERROR MESSAGES         (SEVERITY = 08)
+  NONE
+
+  WARNING MESSAGES       (SEVERITY = 04)
+  NONE
+
+  INFORMATIONAL MESSAGES (SEVERITY = 00)
+  2008  2278
+
+
+  **** END OF MESSAGE SUMMARY REPORT ****
+
