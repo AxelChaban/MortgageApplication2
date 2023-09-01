@@ -9,18 +9,18 @@
       *** File Control                                              ***
       *****************************************************************
        INPUT-OUTPUT SECTION.
-       FILE-CONTRL.
+       FILE-CONTROL.
        DATA DIVISION.
       ****************************************************************
       *** File Section                                              ***
       *****************************************************************
        FILE SECTION.
        WORKING-STORAGE SECTION.
-********       01 CUSTOMER-COPY.
-********          COPY EPSMTCOM.
+****** 01 CUSTOMER-COPY.
+******     COPY EPSMTCOM.
        01 DATE-JOUR PIC X(10).
        PROCEDURE DIVISION.
-                DISPLAY 'AXELTESTDBB7_GITLAB01_openshift'.
+                DISPLAY 'AXELTESTDBB7_GITLAB01_VSCODE'.
                 PERFORM A010-AFFICHAGE-DATE.
       *
        A010-AFFICHAGE-DATE.

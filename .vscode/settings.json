@@ -1,19 +1,172 @@
 {
-    "zopeneditor.userbuild.workspaceSettings": {
-        "dbb": {
-          "command": "$DBB_HOME/bin/groovyz -DBB_PERSONAL_DAEMON",
-          "buildScriptPath" : "/S0W1/var/dbb-zappbuild/build.groovy",
-          "buildScriptArgs": [
-            "--userBuild",
-            "--workspace ${zopeneditor.userbuild.userSettings.dbbWorkspace}",
-            "--application MortgageApplication",
-            "--hlq ${zopeneditor.userbuild.userSettings.dbbHlq}",
-            "--outDir ${zopeneditor.userbuild.userSettings.dbbLogDir}",
-            "--verbose"
+  "zowe.ds.history": {
+      "persistence": true,
+      "favorites": [],
+      "history": [],
+      "sessions": [
+          "10.3.20.119",
+          "10.3.20.34",
+          "ZdnT",
+          "rse",
+          "zosmf"
+      ],
+      "templates": [],
+      "fileHistory": [
+          "[ZDNT]: IBMUSER.ADCD.COMMON.CERT"
+      ],
+      "searchHistory": [
+          "ibmuser.**",
+          "cobol.**",
+          "ibmuser.*",
+          "IBMUSER.S0W1.*",
+          "**"
+      ]
+  },
+  "zowe.uss.history": {
+      "persistence": true,
+      "favorites": [],
+      "history": [],
+      "sessions": [
+          "10.3.20.119",
+          "10.3.20.34",
+          "ZdnT",
+          "zosmf"
+      ],
+      "searchHistory": [
+          "/var",
+          "/u",
+          "/usr",
+          "/root"
+      ],
+      "fileHistory": [
+          "[ZDNT]: /U/IBMUSER/PROJECTS/LOGS/BUILDLIST.TXT",
+          "[ZDNT]: /U/IBMUSER/PROJECTS/APPLICATION-CONF/ASSEMBLER.PROPERTIES",
+          "[ZDNT]: /VAR/DBB-ZAPPBUILD/LANGUAGES/BMS.GROOVY",
+          "[ZDNT]: /VAR/DBB-ZAPPBUILD/LANGUAGES/COBOL.GROOVY",
+          "[ZDNT]: /VAR/DBB-ZAPPBUILD/LANGUAGES/ASSEMBLER.GROOVY",
+          "[ZDNT]: /U/IBMUSER/PROJECTS/COBOL/DBBTEST.CBL"
+      ],
+      "templates": []
+  },
+  "zowe.jobs.history": {
+      "persistence": true,
+      "favorites": [],
+      "history": [],
+      "sessions": [
+          "ZdnT"
+      ],
+      "fileHistory": [],
+      "searchHistory": [],
+      "templates": []
+  },
+  "files.associations": {
+      "*.COBOL*": "cobol",
+      "*.COB*": "cobol",
+      "*.COBCOPY*": "cobol",
+      "*.COPYBOOK*": "cobol",
+      "*.COPY*": "cobol",
+      "*.PL1*": "pl1",
+      "*.PLI*": "pl1",
+      "*.INC*": "pl1",
+      "*.INCLUDE*": "pl1",
+      "*.JCL*": "jcl",
+      "*.ASM*": "hlasm",
+      "*.ASSEMBLE*": "hlasm",
+      "*.HLASM*": "hlasm",
+      "*.HLA*": "hlasm",
+      "*.MACLIB*": "hlasm",
+      "*.EXEC*": "rexx",
+      "*.REXX*": "rexx",
+      "*.REXXINC*": "rexx",
+      "*.copyasm": "hlasm",
+      "*.macasm": "hlasm",
+      "*.bms": "hlasm",
+      "*.rex": "rexx",
+      "*.rexx": "rexx"
+  },
+  "json.schemas": [
+      {
+          "fileMatch": [
+              "/zapp.json"
           ],
-          "additionalDependencies": [
-            "application-conf"
-          ]
-        }
-    }
+          "url": "file:///c%3A/Users/109449706/.vscode/extensions/ibm.zopeneditor-3.2.1/resources/zapp-schema-1.0.0.json"
+      },
+      {
+          "fileMatch": [
+              "/zcodeformat.json"
+          ],
+          "url": "file:///c%3A/Users/109449706/.vscode/extensions/ibm.zopeneditor-3.2.1/resources/zcodeformat-schema-0.0.1.json"
+      }
+  ],
+  "gitlens.defaultDateLocale": null,
+  "yaml.schemas": {
+      "file:///c%3A/Users/109449706/.vscode/extensions/ibm.zopeneditor-3.2.1/resources/zapp-schema-1.0.0.json": [
+          "zapp.yaml"
+      ],
+      "file:///c%3A/Users/109449706/.vscode/extensions/ibm.zopeneditor-3.2.1/resources/zcodeformat-schema-0.0.1.json": [
+          "zcodeformat.yaml"
+      ]
+  },
+  "zopeneditor.welcomePage.show": true,
+  "zopeneditor.zapp.enabled": false,
+  "zowe.commands.history": {
+      "persistence": true,
+      "history": [],
+      "fileHistory": [],
+      "searchHistory": [
+          "srchfor 'DBB'"
+      ],
+      "templates": []
+  },
+  "zopeneditor.userbuild.userSettings": {
+      "dbbWorkspace": "/u/ibmuser/projects",
+      "dbbHlq": "IBMUSER.BUILDDBB",
+      "dbbLogDir": "/u/ibmuser/projects/logs"
+  },
+  "zopeneditor.propertygroups": [
+      {
+        "name": "local-cobol-files",
+        "type": "local",
+        "language": "cobol",
+        "syslib": [
+            "copylib",
+            "copybook",
+            "INCLUDES"
+        ],
+        "libraries": [
+         {
+           "name": "MYFILE",
+           "locations": [
+             "copylib",
+             "copybook",
+             "INCLUDES"
+            ]
+         }
+        ]
+      }
+  ],
+  "zopeneditor.userbuild.workspaceSettings": {
+      "dbb": {
+        "command": "$DBB_HOME/bin/groovyz -DBB_PERSONAL_DAEMON",
+        "buildScriptPath" : "/S0W1/var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy",
+        "buildScriptArgs": [
+          "--userBuild",
+          "--workspace ${zopeneditor.userbuild.userSettings.dbbWorkspace}",
+          "--application MortgageApplication",
+          "--hlq ${zopeneditor.userbuild.userSettings.dbbHlq}",
+          "--outDir ${zopeneditor.userbuild.userSettings.dbbLogDir}",
+          "--verbose"
+        ],
+        "additionalDependencies": [
+          "application-conf"
+        ]
+      }
+  },
+"redhat.telemetry.enabled": true,
+"settingsSync.ignoredSettings": [
+  "zopeneditor.JAVA_HOME"
+],
+"zowe.settings.version": 2,
+"zopeneditor.JAVA_HOME": "C:/Program Files/Semeru/jdk-17.0.8.101-openj9"
 }
+
