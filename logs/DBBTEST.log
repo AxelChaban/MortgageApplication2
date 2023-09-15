@@ -1,4 +1,4 @@
-PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927                 Date 09/01/2023  Time 15:40:49   Page     1
+PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927                 Date 09/15/2023  Time 14:22:52   Page     1
 
 Invocation parameters:
  LIB
@@ -57,7 +57,7 @@ Options in effect:
    OBJECT
  NOOFFSET
    OPTIMIZE(0)
-   OUTDD(SYSOUT)PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927                 Date 09/01/2023  Time 15:40:49   Page     2
+   OUTDD(SYSOUT)PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927                 Date 09/15/2023  Time 14:22:52   Page     2
 
  NOPARMCHECK
    PGMNAME(COMPAT)
@@ -86,7 +86,7 @@ Options in effect:
  NOWORD
    XMLPARSE(XMLSS)
    XREF(FULL)
-   ZWBPP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927                 Date 09/01/2023  Time 15:40:49   Page     3
+   ZWBPP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927                 Date 09/15/2023  Time 14:22:52   Page     3
 
 LineID  Message code  Library phase message text
 
@@ -95,7 +95,7 @@ LineID  Message code  Library phase message text
 
 Messages    Total    Informational    Warning    Error    Severe    Terminating
 
-Printed:       1                          1PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 15:40:49   Page     4
+Printed:       1                          1PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/15/2023  Time 14:22:52   Page     4
   LineID  PL SL  ----+-*A-1-B--+----2----+----3----+----4----+----5----+----6----+----7-|--+----8 Map and Cross Reference
 
   000001           ******************************************************************
@@ -140,12 +140,12 @@ Printed:       1                          1PP 5655-EC6 IBM Enterprise COBOL for
   000040C                                              PIC X(4).
   000041                01 DATE-JOUR PIC X(10).
   000042                PROCEDURE DIVISION.
-  000043                         DISPLAY 'AXELTESTDBB7_GITLAB01_VSCODE'.
+  000043                         DISPLAY 'AXELTESTDBB_N*01_04092023_VSCODE'.
   000044                         PERFORM A010-AFFICHAGE-DATE.                                     46
   000045               *
   000046                A010-AFFICHAGE-DATE.
   000047                         MOVE '2023-05-02' TO DATE-JOUR.                                  41
-  000048                         STOP RUN.PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 15:40:49   Page     5
+  000048                         STOP RUN.PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/15/2023  Time 14:22:52   Page     5
 
 An "M" preceding a data-name reference indicates that the data-name is modified by this reference.
 
@@ -163,7 +163,7 @@ An "M" preceding a data-name reference indicates that the data-name is modified 
       33   EPSPCOM-RETURN-MONTH-PAYMENT
       30   EPSPCOM-YEAR-MONTH-IND
       37   EPS02-REQUEST-SUCCESS
-      21   PROCESS-INDICATORPP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 15:40:49   Page     6
+      21   PROCESS-INDICATORPP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/15/2023  Time 14:22:52   Page     6
 
 Context usage is indicated by the letter preceding a procedure-name reference.
 These letters and their meanings are:
@@ -177,11 +177,11 @@ These letters and their meanings are:
 
  Defined   Cross-reference of procedures   References
 
-      46   A010-AFFICHAGE-DATE. . . . . .  P44PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 15:40:49   Page     7
+      46   A010-AFFICHAGE-DATE. . . . . .  P44PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/15/2023  Time 14:22:52   Page     7
 
  Defined   Cross-reference of programs     References
 
-       4   DBBTESTPP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 15:40:49   Page     8
+       4   DBBTESTPP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/15/2023  Time 14:22:52   Page     8
 
 
          COPY/BASIS cross-reference of text-names, library names and dataset information
@@ -192,7 +192,7 @@ These letters and their meanings are:
  EPSMTCOM  SYSLIB    ACHABAN.MORTGAGE.COPY                          0
  EPSMTINP  SYSLIB    ACHABAN.MORTGAGE.COPY                          0
  EPSMTOUT  SYSLIB    ACHABAN.MORTGAGE.COPY                          0
-PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/01/2023  Time 15:40:49   Page     9
+PP 5655-EC6 IBM Enterprise COBOL for z/OS  6.3.0 P210927       DBBTEST   Date 09/15/2023  Time 14:22:52   Page     9
 
 LineID  Message code  Message text
 
@@ -216,7 +216,7 @@ Printed:       3           1              2
 End of compilation 1,  program DBBTEST,  highest severity 4.
 
 Return code 4
-1z/OS V2 R4 BINDER     15:40:49 FRIDAY SEPTEMBER  1, 2023
+1z/OS V2 R4 BINDER     14:22:53 FRIDAY SEPTEMBER 15, 2023
  BATCH EMULATOR  JOB(ACHABAN6) STEP(*OMVSEX ) PGM= IEWBLINK
  IEW2278I B352 INVOCATION PARAMETERS - MAP,RENT,COMPAT(PM5)
 
@@ -407,7 +407,7 @@ Return code 4
     PROGRAM TYPE        PROGRAM OBJECT(FORMAT 5 OS COMPAT LEVEL z/OS V1R8 )
     VOLUME SERIAL       TEC000
     DISPOSITION         REPLACED
-    TIME OF SAVE        15.40.49  SEP  1, 2023
+    TIME OF SAVE        14.22.53  SEP 15, 2023
 
 
 1SAVE MODULE ATTRIBUTES:
@@ -450,7 +450,7 @@ Return code 4
 
 
 
-1z/OS V2 R4 BINDER     15:40:49 FRIDAY SEPTEMBER  1, 2023
+1z/OS V2 R4 BINDER     14:22:53 FRIDAY SEPTEMBER 15, 2023
  BATCH EMULATOR  JOB(ACHABAN6) STEP(*OMVSEX ) PGM= IEWBLINK
  IEW2008I 0F03 PROCESSING COMPLETED.  RETURN CODE =  0.
 

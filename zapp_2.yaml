@@ -89,7 +89,7 @@ profiles:
     type: dbb
     settings:
       application: MortgageApplication
-      command: "$DBB_HOME/bin/groovyz"
+      command: "$DBB_HOME/bin/groovyz DBB_PERSONAL_DAEMON"
       buildScriptPath: "/var/dbb-zappbuild-v2/dbb-zappbuild/build.groovy"
       buildScriptArgs:
         - "--userBuild"
